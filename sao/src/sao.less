@@ -1,0 +1,156 @@
+@small-padding: .1em;
+@medium-padding: .5em;
+@large-padding: 1em;
+
+@small-font-size: .8em;
+@medium-font-size: 1em;
+@large-font-size: 2em;
+
+@grey: #dddddd;
+@light-grey: #f9f9f9;
+@highlight: #e7e7e7;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: @small-font-size;
+}
+
+#menu {
+    vertical-align: top;
+    padding-right: @medium-padding;
+    font-size: @medium-font-size;
+    cursor: pointer;
+}
+
+#tabs {
+    height: 100%;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding: @medium-padding @small-padding;
+}
+
+.tab-title-bar {
+    padding: @medium-padding @medium-padding;
+}
+
+.tab-title .ui-button-text {
+    font-size: @large-font-size;
+}
+
+.tab-status, .tab-info {
+    float: right;
+}
+
+.treeview {
+    & > table.tree {
+        width: 100%;
+        table-layout: fixed;
+
+        & > thead > tr > th, > tbody > tr > td {
+            padding: @small-padding;
+            line-height: @large-font-size;
+            & td {
+                padding: 0;
+                line-height: normal;
+            }
+        }
+        & > tbody > tr > td {
+            border-top: .1em solid @grey;
+            cursor: pointer;
+            & > * {
+                vertical-align: middle;
+            }
+        }
+        & > tbody > tr:nth-child(odd) {
+            background-color: @light-grey;
+        }
+        & > tbody > tr:hover {
+            background-color: @highlight;
+        }
+        & img.column-affix {
+            width: 2em;
+            height: 2em;
+        }
+    }
+    & td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    & .expander {
+        cursor: pointer;
+    }
+    & .treefooter {
+        text-align: center;
+        padding-top: @large-padding;
+    }
+}
+
+.filter-box tr td:nth-child(2) {
+    width: 100%;
+    & input {
+        width: 100%;
+    }
+}
+
+.form {
+    width: 100%;
+    & > .form-container {
+        width: 100%;
+    }
+    & td.form-label {
+        text-align: right;
+        white-space: nowrap;
+    }
+    & .form-many2one, .form-date, .form-binary, .form-reference {
+        & button {
+            float: right;
+        }
+        & div {
+            overflow: hidden;
+            & input {
+                width: 100%;
+                boxing-sizing: border-box;
+            }
+        }
+        & select, span {
+            float: left;
+        }
+    }
+    & .form-one2many-menu, .form-one2many-content,
+    .form-many2many-menu, .form-many2many-content {
+        border: 1px solid rgb(170, 170, 170);
+        border-radius: 4px;
+    }
+    & .form-one2many-menu, .form-many2many-menu {
+        overflow: auto;
+        & .form-one2many-string, .form-many2many-string {
+            float: left;
+        }
+        & .form-one2many-toolbar, .form-many2many-toolbar {
+            float: right;
+        }
+        & .form-one2many-string, .form-one2many-label,
+        .form-many2many-string, .form-many2many-label {
+            margin-top: 8px;
+        }
+    }
+}
+
+button {
+    & .ui-icon-custom {
+        background-size: 16px 16px;
+    }
+}
+
+.message-dialog {
+    & .dialog-icon {
+        display: table-cell;
+    }
+    & p {
+        display: table;
+        white-space: pre;
+    }
+}

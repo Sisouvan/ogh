@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+}
+#menu {
+  vertical-align: top;
+  padding-right: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+}
+#tabs {
+  height: 100%;
+}
+.ui-tabs .ui-tabs-panel {
+  padding: 0.5em 0.1em;
+}
+.tab-title-bar {
+  padding: 0.5em 0.5em;
+}
+.tab-title .ui-button-text {
+  font-size: 2em;
+}
+.tab-status,
+.tab-info {
+  float: right;
+}
+.treeview > table.tree {
+  width: 100%;
+  table-layout: fixed;
+}
+.treeview > table.tree > thead > tr > th,
+.treeview > table.tree > tbody > tr > td {
+  padding: 0.1em;
+  line-height: 2em;
+}
+.treeview > table.tree > thead > tr > th td,
+.treeview > table.tree > tbody > tr > td td {
+  padding: 0;
+  line-height: normal;
+}
+.treeview > table.tree > tbody > tr > td {
+  border-top: 0.1em solid #dddddd;
+  cursor: pointer;
+}
+.treeview > table.tree > tbody > tr > td > * {
+  vertical-align: middle;
+}
+.treeview > table.tree > tbody > tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.treeview > table.tree > tbody > tr:hover {
+  background-color: #e7e7e7;
+}
+.treeview > table.tree img.column-affix {
+  width: 2em;
+  height: 2em;
+}
+.treeview td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.treeview .expander {
+  cursor: pointer;
+}
+.treeview .treefooter {
+  text-align: center;
+  padding-top: 1em;
+}
+.filter-box tr td:nth-child(2) {
+  width: 100%;
+}
+.filter-box tr td:nth-child(2) input {
+  width: 100%;
+}
+.form {
+  width: 100%;
+}
+.form > .form-container {
+  width: 100%;
+}
+.form td.form-label {
+  text-align: right;
+  white-space: nowrap;
+}
+.form .form-many2one button,
+.form .form-date button,
+.form .form-binary button,
+.form .form-reference button {
+  float: right;
+}
+.form .form-many2one div,
+.form .form-date div,
+.form .form-binary div,
+.form .form-reference div {
+  overflow: hidden;
+}
+.form .form-many2one div input,
+.form .form-date div input,
+.form .form-binary div input,
+.form .form-reference div input {
+  width: 100%;
+  boxing-sizing: border-box;
+}
+.form .form-many2one select,
+.form .form-date select,
+.form .form-binary select,
+.form .form-reference select,
+.form .form-many2one span,
+.form .form-date span,
+.form .form-binary span,
+.form .form-reference span {
+  float: left;
+}
+.form .form-one2many-menu,
+.form .form-one2many-content,
+.form .form-many2many-menu,
+.form .form-many2many-content {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+}
+.form .form-one2many-menu,
+.form .form-many2many-menu {
+  overflow: auto;
+}
+.form .form-one2many-menu .form-one2many-string,
+.form .form-many2many-menu .form-one2many-string,
+.form .form-one2many-menu .form-many2many-string,
+.form .form-many2many-menu .form-many2many-string {
+  float: left;
+}
+.form .form-one2many-menu .form-one2many-toolbar,
+.form .form-many2many-menu .form-one2many-toolbar,
+.form .form-one2many-menu .form-many2many-toolbar,
+.form .form-many2many-menu .form-many2many-toolbar {
+  float: right;
+}
+.form .form-one2many-menu .form-one2many-string,
+.form .form-many2many-menu .form-one2many-string,
+.form .form-one2many-menu .form-one2many-label,
+.form .form-many2many-menu .form-one2many-label,
+.form .form-one2many-menu .form-many2many-string,
+.form .form-many2many-menu .form-many2many-string,
+.form .form-one2many-menu .form-many2many-label,
+.form .form-many2many-menu .form-many2many-label {
+  margin-top: 8px;
+}
+button .ui-icon-custom {
+  background-size: 16px 16px;
+}
+.message-dialog .dialog-icon {
+  display: table-cell;
+}
+.message-dialog p {
+  display: table;
+  white-space: pre;
+}

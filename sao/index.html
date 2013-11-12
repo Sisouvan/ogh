@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<HTML style="overflow-y: scroll;">
+    <HEAD>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <TITLE>Tryton</TITLE>
+        <LINK rel="icon" type="image/png" href="images/tryton-icon.png"/>
+        <SCRIPT type="text/javascript" src="external/jquery.js"></SCRIPT>
+        <SCRIPT type="text/javascript">
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape('%3CSCRIPT type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"%3E%3C/SCRIPT%3E'));
+            }
+        </SCRIPT>
+        <SCRIPT type="text/javascript" src="external/jquery-ui.js"></SCRIPT>
+        <LINK rel="stylesheet" type="text/css" href="external/jquery-ui.css"
+        media="screen"/>
+        <SCRIPT type="text/javascript">
+            if (typeof jQuery.ui == 'undefined') {
+                document.write(unescape('%3CSCRIPT type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"%3E%3C/SCRIPT%3E'));
+                document.write(unescape('%3CLINK rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" media="screen"/%3E'));
+            }
+        </SCRIPT>
+        <SCRIPT type="text/javascript" src="dist/sao.min.js"></SCRIPT>
+        <LINK rel="stylesheet" type="text/css" href="dist/sao.min.css"
+        media="screen"/>
+        <SCRIPT type="text/javascript">
+            if (typeof Sao == 'undefined') {
+                document.write(unescape('%3CSCRIPT type="text/javascript" src="dist/sao.js"%3E%3C/SCRIPT%3E'));
+                document.write(unescape('%3CLINK rel="stylesheet" type="text/css" href="dist/sao.css" media="screen"/%3E'));
+            }
+        </SCRIPT>
+    </HEAD>
+    <BODY>
+        <DIV style="overflow: auto;">
+            <SPAN id="user-preferences" style="float: left;"></SPAN>
+            <SPAN id="user-logout" style="float: right;"></SPAN>
+        </DIV>
+        <DIV id="main" style="width: 100%">
+            <DIV id="menu" style="display: inline-block; overflow: hidden; width: 20%"></DIV>
+            <DIV id="tabs" style="display: inline-block;"></DIV>
+        </DIV>
+        <SCRIPT type="text/javascript">
+            jQuery(function() {
+                    var resize = function() {
+                        var menu = jQuery(this);
+                        var remaining_space = (menu.parent().width() -
+                            jQuery(this).outerWidth() - 5); // 5px for handler
+                        var tabs = menu.next();
+                        tabs_width = (remaining_space -
+                            (tabs.outerWidth() - tabs.width()));
+                        tabs.width(tabs_width);
+                        }
+                    jQuery('#menu').resizable({
+                        handles: 'e',
+                        resize: resize
+                        });
+                    jQuery(window).resize(function() {
+                        var menu = jQuery('#menu');
+                        resize.call(menu);
+                        });
+                    Sao.login();
+                    });
+        </SCRIPT>
+    </BODY>
+</HTML>
